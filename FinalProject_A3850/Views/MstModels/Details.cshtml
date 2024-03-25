@@ -1,0 +1,44 @@
+@model FinalProject_A3850_DAL.Models.Dto.Res.ResModelsDto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>MstModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DtAdded)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DtAdded)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DtUpdated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DtUpdated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BrandId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BrandId)
+        </dd>
+
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

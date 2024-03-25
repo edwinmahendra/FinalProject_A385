@@ -1,0 +1,235 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = FinalProject_A3850
+build_property.RootNamespace = FinalProject_A3850
+build_property.ProjectDir = /Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstBrands/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0QnJhbmRzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstBrands/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0QnJhbmRzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstBrands/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0QnJhbmRzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstBrands/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0QnJhbmRzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstBrands/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0QnJhbmRzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstCars/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0Q2Fycy9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstCars/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0Q2Fycy9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstCars/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0Q2Fycy9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstCars/FormCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0Q2Fycy9Gb3JtQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstCars/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0Q2Fycy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstCustomers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0Q3VzdG9tZXJzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstCustomers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0Q3VzdG9tZXJzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstCustomers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0Q3VzdG9tZXJzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstCustomers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0Q3VzdG9tZXJzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstCustomers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0Q3VzdG9tZXJzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstModels/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0TW9kZWxzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstModels/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0TW9kZWxzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstModels/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0TW9kZWxzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstModels/FormCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0TW9kZWxzL0Zvcm1DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstModels/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0TW9kZWxzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstSales/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0U2FsZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstSales/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0U2FsZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstSales/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0U2FsZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstSales/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0U2FsZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstSales/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0U2FsZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VHlwZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstTypes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VHlwZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstTypes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VHlwZXMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VHlwZXMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VHlwZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstUsages/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VXNhZ2VzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstUsages/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VXNhZ2VzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstUsages/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VXNhZ2VzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstUsages/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VXNhZ2VzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstUsages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VXNhZ2VzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstUsers/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VXNlcnMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstUsers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VXNlcnMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstUsers/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VXNlcnMvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstUsers/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VXNlcnMvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/MstUsers/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTXN0VXNlcnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/TrnCarPurchases/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJuQ2FyUHVyY2hhc2VzL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/TrnCarPurchases/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJuQ2FyUHVyY2hhc2VzL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/TrnCarPurchases/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJuQ2FyUHVyY2hhc2VzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/TrnCarPurchases/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJuQ2FyUHVyY2hhc2VzL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/TrnCarPurchases/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJuQ2FyUHVyY2hhc2VzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/edwinmahen/Documents/EDWIN MAHENDRA/SEMESTER 8/Project NEt/FinalProjectNew/Dotnet/FinalProject_A3850/FinalProject_A3850/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-l8osuyorop

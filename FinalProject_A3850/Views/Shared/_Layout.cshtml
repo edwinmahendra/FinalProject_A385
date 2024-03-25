@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FinalProject_A3850</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FinalProject_A3850.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+        }
+
+        #wrapper {
+            display: flex;
+            height: 100vh;
+        }
+
+        #sidebar-wrapper {
+            min-height: 100vh;
+            background-color: #37474F;
+            width: 250px;
+            overflow-y: auto;
+            position: fixed;
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 20%);
+        }
+
+        #sidebar-wrapper .sidebar-heading {
+            padding: 20px;
+            background-color: #263238;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        #sidebar-wrapper .list-group {
+            width: 250px;
+        }
+
+        #sidebar-wrapper .list-group-item {
+            border: none;
+            padding: 20px;
+            color: #CFD8DC;
+            background-color: #37474F;
+        }
+
+        #sidebar-wrapper .list-group-item:hover,
+        #sidebar-wrapper .list-group-item.active {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #sidebar-wrapper .list-group-item i {
+            margin-right: 16px;
+        }
+
+        #page-content-wrapper {
+            margin-left: 250px;
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        @@media(max-width:992px) {
+            #sidebar-wrapper {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            #page-content-wrapper {
+                margin-left: 0;
+            }
+
+            #sidebar-wrapper.list-group {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 0;
+            }
+
+            #sidebar-wrapper.list-group-item {
+                display: inline-block;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <header class="sidebar-heading">My App</header>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action" asp-area="" asp-controller="Home"
+                    asp-action="Index">Home</a>
+                <a class="list-group-item list-group-item-action" asp-area="" asp-controller="MstBrands"
+                    asp-action="Index">Brand</a>
+                <a class="list-group-item list-group-item-action" asp-area="" asp-controller="MstTypes"
+                    asp-action="Index">Type</a>
+                <a class="list-group-item list-group-item-action" asp-area="" asp-controller="MstUsages"
+                    asp-action="Index">Usage</a>
+                <a class="list-group-item list-group-item-action" asp-area="" asp-controller="MstModels"
+                    asp-action="Index">Model</a>
+                <a class="list-group-item list-group-item-action" asp-area="" asp-controller="MstCustomers"
+                    asp-action="Index">Customer</a>
+                <a class="list-group-item list-group-item-action" asp-area="" asp-controller="MstCars"
+                    asp-action="Index">Car</a>
+                <a class="list-group-item list-group-item-action" asp-area="" asp-controller="TrnCarPurchases"
+                    asp-action="Index">Car Purchase</a>
+            </div>
+        </div>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

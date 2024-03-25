@@ -1,0 +1,36 @@
+@model FinalProject_A3850_DAL.Models.Dto.Res.ResModelsDto
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container py-5">
+    <h1>Edit</h1>
+    <h4 class="mb-3">MstModel</h4>
+    <div class="row">
+        <div class="col-lg-6">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="BrandId" class="form-label"></label>
+                    <select asp-for="BrandId" class="form-select" asp-items="ViewBag.Brands"></select>
+                    <span asp-validation-for="BrandId" class="text-danger"></span>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                    <div class="col text-end">
+                        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

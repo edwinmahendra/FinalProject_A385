@@ -1,0 +1,84 @@
+@model FinalProject_A3850_DAL.Models.TrnCarPurchase
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>TrnCarPurchase</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tenor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tenor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DownPayment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DownPayment)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PaymentStatus)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DtAdded)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DtAdded)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DtUpdated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DtUpdated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdUserAdded)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdUserAdded)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdUserUpdated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdUserUpdated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Car)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Car.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cust)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cust.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

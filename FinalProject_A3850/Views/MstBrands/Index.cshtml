@@ -1,0 +1,173 @@
+@model List<FinalProject_A3850_DAL.Models.Dto.Res.ResBrandDto>
+
+@{
+    ViewData["Title"] = "Brand Index";
+}
+
+<h1 class="my-4">Brand List</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Create New Brand</a>
+</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Country</th>
+                <th scope="col" class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Country)</td>
+                    <td class="text-center">
+                        <a data-id="@item.Id" data-username="@item.Name" data-country="@item.Country" href="#"
+                            class="btn btn-outline-primary btn-sm mr-2 User">Edit</a>
+                        <a data-id="@item.Id" data-username="@item.Name" href="#"
+                            class="btn btn-outline-danger btn-sm mr-2 DeleteUser">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="deleteBrandModal" tabindex="-1" role="dialog" aria-labelledby="deleteBrandModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" id="formDeleteUser">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel">Confirmation Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    Are you sure you want to delete <b id="uNameDeleted"></b>?
+                    <input type="hidden" name="Id" id="Id">
+                    <input type="hidden" name="UserName" id="name">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger" id="confirmDelete">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editBrandModal" tabindex="-1" role="dialog" aria-labelledby="editBrandModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" id="formEditBrand">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editBrandModalLabel">Edit Brand</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="Id" id="editBrandId" />
+                    <div class="mb-3">
+                        <label for="editBrandName" class="form-label">Brand Name</label>
+                        <input type="text" name="Name" id="editBrandName" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="editBrandCountry" class="form-label">Country</label>
+                        <input type="text" name="Country" id="editBrandCountry" class="form-control" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        $('.DeleteUser').on("click", function (e) {
+            e.preventDefault();
+            let idDelete = $(this).data('id');
+            let nameDelete = $(this).data('username');
+            var myModal = new bootstrap.Modal(document.getElementById('deleteBrandModal'));
+            myModal.show();
+            $('#uNameDeleted').text(nameDelete);
+            $('#Id').val(idDelete);
+            $('#name').val(nameDelete);
+
+            $('#formDeleteUser').off('submit');
+            $('#formDeleteUser').on('submit', function (e) {
+                e.preventDefault();
+                let formDeleteUser = new FormData(document.getElementById("formDeleteUser"));
+                $.ajax({
+                    url: 'MstBrands/DeleteBrand',
+                    type: 'POST',
+                    data: formDeleteUser,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        "RequestVerificationToken": $('#formDeleteUser input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        myModal.hide();
+                        window.location.reload();
+                        console.log("Berhasil Delete Data");
+                    },
+                    error: function (jqXHR) {
+                        console.log("Gagal Delete Data" + jqXHR.responseText);
+                        myModal.hide();
+                    }
+                });
+            });
+        });
+
+        $('.User').on("click", function (e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            let name = $(this).data('username');
+            let country = $(this).data('country');
+        @* $('#editBrandId').val(id); *@
+                $('#editBrandId').val(id);
+            $('#editBrandName').val(name);
+            $('#editBrandCountry').val(country);
+            var myModal = new bootstrap.Modal(document.getElementById('editBrandModal'));
+            myModal.show();
+
+            $('#formDeleteUser').off('submit');
+            $('#formEditBrand').submit(function (e) {
+                e.preventDefault();
+                let formEditBrand = new FormData(document.getElementById("formEditBrand"));
+                $.ajax({
+                    url: 'MstBrands/Create',
+                    type: 'POST',
+                    data: formEditBrand,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        "RequestVerificationToken": $('#formEditBrand input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        // Sembunyikan modal setelah berhasil
+                        $('#editBrandModal').modal('hide');
+                        // Muat ulang halaman untuk memperbarui data
+                        window.location.reload();
+                        console.log("Berhasil Edit Data");
+                    },
+                    error: function (jqXHR) {
+                        console.log("Gagal Edit Data" + jqXHR.responseText);
+                        // Sembunyikan modal jika ada kesalahan
+                        $('#editBrandModal').modal('hide');
+                    }
+                });
+            });
+
+        });
+
+    </script>
+}

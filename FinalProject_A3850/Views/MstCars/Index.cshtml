@@ -1,0 +1,49 @@
+@model List<FinalProject_A3850_DAL.Models.Dto.Res.ResCarInfoDto>
+
+@{
+    ViewData["Title"] = "Car Information List";
+}
+
+<h1 class="my-4">Cars List</h1>
+
+<p>
+    <a asp-action="FormCreate" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Create New Brand</a>
+</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>Engine Size</th>
+                <th>Fuel Type</th>
+                <th>Manufacture Year</th>
+                <th>Chassis Code</th>
+                <th>Engine Code</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Type</th>
+                <th>Usage</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.EngineSize</td>
+                    <td>@item.FuelType</td>
+                    <td>@item.ManufactureYear</td>
+                    <td>@item.CdChassis</td>
+                    <td>@item.CdEngine</td>
+                    <td>@item.BrandName</td>
+                    <td>@item.ModelName</td>
+                    <td>@item.TypeName</td>
+                    <td>@item.UsageName</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm mr-2">Edit</a>
+                        <a asp-action="Deletecar" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm mr-2">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,68 @@
+@model FinalProject_A3850.Models.MstSale
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>MstSale</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdSales" class="control-label"></label>
+                <input asp-for="IdSales" class="form-control" />
+                <span asp-validation-for="IdSales" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JumlahPenjualan" class="control-label"></label>
+                <input asp-for="JumlahPenjualan" class="form-control" />
+                <span asp-validation-for="JumlahPenjualan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Komisi" class="control-label"></label>
+                <input asp-for="Komisi" class="form-control" />
+                <span asp-validation-for="Komisi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DtAdded" class="control-label"></label>
+                <input asp-for="DtAdded" class="form-control" />
+                <span asp-validation-for="DtAdded" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DtUpdated" class="control-label"></label>
+                <input asp-for="DtUpdated" class="form-control" />
+                <span asp-validation-for="DtUpdated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdUserAdded" class="control-label"></label>
+                <input asp-for="IdUserAdded" class="form-control" />
+                <span asp-validation-for="IdUserAdded" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdUserUpdated" class="control-label"></label>
+                <input asp-for="IdUserUpdated" class="form-control" />
+                <span asp-validation-for="IdUserUpdated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

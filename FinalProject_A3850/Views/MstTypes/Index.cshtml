@@ -1,0 +1,162 @@
+@model List<FinalProject_A3850_DAL.Models.Dto.Res.ResTypeDto>
+
+@{
+    ViewData["Title"] = "Type Index";
+}
+
+<h1 class="my-4">Type List</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Add New Type</a>
+</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col" class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td class="text-center">
+                        <a data-id="@item.Id" data-username="@item.Name" href="#"
+                            class="btn btn-outline-primary btn-sm mr-2 EditType">Edit</a>
+                        <a data-id="@item.Id" data-username="@item.Name" href="#"
+                            class="btn btn-outline-danger btn-sm mr-2 DeleteType">Delete</a>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<div class="modal fade" id="editTypeModal" tabindex="-1" role="dialog" aria-labelledby="editTypeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" id="formEditType">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTypeModalLabel">Edit Type</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="Id" id="editTypeId" />
+                    <div class="mb-3">
+                        <label for="editTypeName" class="form-label">Type Name</label>
+                        <input type="text" name="Name" id="editTypeName" class="form-control" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteTypeModal" tabindex="-1" role="dialog" aria-labelledby="deleteTypeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" id="formDeleteType">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteTypeModalLabel">Confirmation Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete <b id="typeNameToDelete"></b>?
+                    <input type="hidden" name="Id" id="deleteTypeId">
+                    <input type="hidden" name="Name" id="deleteTypeName">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script>
+        $('.EditType').on("click", function (e) {
+            e.preventDefault();
+            let name = $(this).data('username');
+            let id = $(this).closest('tr').find('td:first').text();
+            $('#editTypeId').val(id.trim());
+            $('#editTypeName').val(name);
+            var myModal = new bootstrap.Modal(document.getElementById('editTypeModal'));
+            myModal.show();
+
+            $('#formEditType').off('submit');
+            $('#formEditType').submit(function (e) {
+                e.preventDefault();
+                let formEditType = new FormData(document.getElementById("formEditType"));
+                $.ajax({
+                    url: 'MstTypes/Create',
+                    type: 'POST',
+                    data: formEditType,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        "RequestVerificationToken": $('#formEditType input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        $('#editTypeModal').modal('hide');
+                        window.location.reload();
+                        console.log("Berhasil Edit Data");
+                    },
+                    error: function (jqXHR) {
+                        console.log("Gagal Edit Data" + jqXHR.responseText);
+                        $('#editTypeModal').modal('hide');
+                    }
+                });
+            });
+        });
+
+        $('.DeleteType').on("click", function (e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            let name = $(this).data('username');
+            $('#typeNameToDelete').text(name);
+            $('#deleteTypeId').val(id);
+            $('#deleteTypeName').val(name); // Mengatur nilai input hidden untuk menyimpan nama
+            var myModal = new bootstrap.Modal(document.getElementById('deleteTypeModal'));
+            myModal.show();
+
+            $('#formDeleteType').off('submit');
+            $('#formDeleteType').submit(function (e) {
+                e.preventDefault();
+                let formDeleteType = new FormData(document.getElementById("formDeleteType"));
+                $.ajax({
+                    url: 'MstTypes/DeleteType',
+                    type: 'POST',
+                    data: formDeleteType,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        "RequestVerificationToken": $('#formDeleteType input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        $('#deleteTypeModal').modal('hide');
+                        window.location.reload();
+                        console.log("Berhasil Hapus Data");
+                    },
+                    error: function (jqXHR) {
+                        console.log("Gagal Hapus Data" + jqXHR.responseText);
+                        $('#deleteTypeModal').modal('hide');
+                    }
+                });
+            });
+        });
+
+
+    </script>
+}

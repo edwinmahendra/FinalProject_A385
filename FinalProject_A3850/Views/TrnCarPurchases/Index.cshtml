@@ -1,0 +1,51 @@
+@model List<FinalProject_A3850_DAL.Models.MstBuy>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center">
+        <h1>Tagihan</h1>
+        <a asp-action="Create" class="btn btn-primary">Beli</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Tenor</th>
+                    <th>Down Payment</th>
+                    <th>Tax</th>
+                    <th>Price</th>
+                    <th>Payment Status</th>
+                    <th>Car ID</th>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Model Name</th>
+                    <th>Brand Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Tenor)</td>
+                        <td>@Html.DisplayFor(modelItem => item.DownPayment)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Tax)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PaymentStatus)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CarId)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CustId)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CustomerName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ModelName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.BrandName)</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                            <a href="/TrnCarPurchases/Delete/@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

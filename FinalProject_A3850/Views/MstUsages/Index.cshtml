@@ -1,0 +1,156 @@
+@model List<FinalProject_A3850_DAL.Models.Dto.Res.ResUsageDto>
+
+@{
+    ViewData["Title"] = "Usage Index";
+}
+
+<h1 class="my-4">Usage List</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Add New Usage</a>
+</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col" class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td class="text-center">
+                        <a data-id="@item.Id" data-username="@item.Name" href="#"
+                            class="btn btn-outline-primary btn-sm mr-2 EditUsage">Edit</a>
+                        <a data-id="@item.Id" data-username="@item.Name" href="#"
+                            class="btn btn-outline-danger btn-sm mr-2 DeleteUsage">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="modal fade" id="editUsageModal" tabindex="-1" role="dialog" aria-labelledby="editUsageModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" id="formEditUsage">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editUsageModalLabel">Edit Usage</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="Id" id="editUsageId" />
+                    <div class="mb-3">
+                        <label for="editUsageName" class="form-label">Usage Name</label>
+                        <input type="text" name="Name" id="editUsageName" class="form-control" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteUsageModal" tabindex="-1" role="dialog" aria-labelledby="deleteUsageModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="post" id="formDeleteUsage">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteUsageModalLabel">Confirmation Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete <b id="usageNameToDelete"></b>?
+                    <input type="hidden" name="Id" id="deleteUsageId">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $('.EditUsage').on("click", function (e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            let name = $(this).data('username'); // Mengambil nama dari data-username
+            $('#editUsageId').val(id);
+            $('#editUsageName').val(name.trim());
+            var myModal = new bootstrap.Modal(document.getElementById('editUsageModal'));
+            myModal.show();
+
+            $('#formEditUsage').off('submit');
+            $('#formEditUsage').submit(function (e) {
+                e.preventDefault();
+                let formEditUsage = new FormData(document.getElementById("formEditUsage"));
+                $.ajax({
+                    url: 'MstUsages/Create',
+                    type: 'POST',
+                    data: formEditUsage,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        "RequestVerificationToken": $('#formEditUsage input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        $('#editUsageModal').modal('hide');
+                        window.location.reload();
+                        console.log("Berhasil Edit Data");
+                    },
+                    error: function (jqXHR) {
+                        console.log("Gagal Edit Data" + jqXHR.responseText);
+                        $('#editUsageModal').modal('hide');
+                    }
+                });
+            });
+        });
+
+        $('.DeleteUsage').on("click", function (e) {
+            e.preventDefault();
+            let id = $(this).data('id');
+            let name = $(this).data('username');
+            $('#usageNameToDelete').text(name);
+            $('#deleteUsageId').val(id);
+            var myModal = new bootstrap.Modal(document.getElementById('deleteUsageModal'));
+            myModal.show();
+
+            $('#formDeleteUsage').off('submit');
+            $('#formDeleteUsage').submit(function (e) {
+                e.preventDefault();
+                let formDeleteUsage = new FormData(document.getElementById("formDeleteUsage"));
+                $.ajax({
+                    url: 'MstUsages/DeleteUsage', // Ganti dengan URL yang benar untuk menghapus penggunaan
+                    type: 'POST',
+                    data: formDeleteUsage,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        "RequestVerificationToken": $('#formDeleteUsage input[name="__RequestVerificationToken"]').val()
+                    },
+                    success: function (response) {
+                        $('#deleteUsageModal').modal('hide');
+                        window.location.reload();
+                        console.log("Berhasil Hapus Data");
+                    },
+                    error: function (jqXHR) {
+                        console.log("Gagal Hapus Data" + jqXHR.responseText);
+                        $('#deleteUsageModal').modal('hide');
+                    }
+                });
+            });
+        });
+    </script>
+}
